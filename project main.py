@@ -149,53 +149,61 @@ def addnew():
 def sub ():
   f=open('job offers.csv','wr')
   w=csv.writer(f)
-  w.writerow(jobID,name,adresse,number,email,degre,qual,exp,desc)
+  w.writerow(jobID)
+  w.writerow(name)
+  w.writerow(adresse)
+  w.writerow(number)
+  w.writerow(email)
+  w.writerow(degre)
+  w.writerow(qual)
+  w.writerow(exp)
+  w.writerow(desc)
   f.close()
-
-
-
   
+  def browup():
+  browup=Toplevel(fenetre3)
+    fenetre3.title('browse or update a job offer')
 
+    add=Label(browup,text='browse job offers')
+    add.pack(side= LEFT, padx= 5, pady= 5)
+    addb=button(browup, text='browse', command = browse)
+    addb.pack(side=BOTTOM, padx=5, pady=5)
+
+
+    add=Label(browup,text='update a job offers')
+    add.pack(side= LEFT, padx= 5, pady= 5)
+    addb=button(browup, text='update', command = update)
+    addb.pack(side=BOTTOM, padx=5, pady=5)
+
+
+def browse ():
+   import csv 
+   f=open('job offers.csv','wr')
+   w=csv.writer(f)
+   #browser=Toplevel(browup)
+   #browser.title('job offers')
+   #te = Text(f3, wrap=WORD, width=45, height= 20)
+   #with open(, 'r') as f:
+   #te.insert(INSERT, f.read())
   
-
-
-
-
-
-
-
-
-
   
-
-
+   r = 0
+   for col in reader:
+      c = 0
+      for row in col:
+         
+         label = tkinter.Label(root, width = 10, height = 2, \
+                               text = row, relief = tkinter.RIDGE)
+         label.grid(row = r, column = c)
+         c += 1
+      r += 1
+      
+ def update ():
   
-
   
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
+   
 
 
 

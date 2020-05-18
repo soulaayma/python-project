@@ -35,8 +35,7 @@ class xyz:
 
             #Open new window
             newroot = Tk()
-            application = School_Portal(newroot)
-            newroot.mainloop()
+            # new window's code
 
 
 
